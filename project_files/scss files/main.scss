@@ -1,0 +1,41 @@
+@import "./mixin";
+@import "./variables";
+*,*::before,*::after {
+ margin: 0%;
+ padding: 0%;
+ box-sizing: border-box;
+}
+body {
+ background: url(/project_files/image/image_2.jpeg);
+ background-clip: content-box;
+ background-size: cover;
+ background-attachment: fixed;
+ background-repeat: no-repeat;
+ color: $col_10;
+ font-family: 'Karla', sans-serif;
+}
+
+.btn {
+ @include button(2rem);
+}
+.height {
+ min-height: 100vh;
+}
+.container {
+ width: 90%;
+ margin: 0 auto;
+ background: $col_c;
+}
+.nav_links {
+ @include text_cap;
+ @include text_upp;
+ @include a_dec;
+ @include k_7
+}
+.nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border: 2px solid $col_b;
+}
+
