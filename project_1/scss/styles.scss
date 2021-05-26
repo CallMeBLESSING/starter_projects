@@ -22,14 +22,6 @@ $font_weights: (
  "shoulder": 700
 );
 
-@mixin font_1 {
- font-family: 'Lexend Deca', sans-serif;
- font-weight: map-get($font_weights, deca);
-}
-@mixin font_2 {
- font-family: 'Big Shoulders Display', cursive;
- font-weight: map-get($font_weights, shoulder);
-}
 body {
  background: $bc_he_bu;
  font-family: 'Big Shoulders Display', cursive;
