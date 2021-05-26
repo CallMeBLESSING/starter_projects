@@ -1,0 +1,102 @@
+//font import
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+ // Mobile: 375px
+ // Desktop: 1440px
+ //global variables
+ //preset
+* {
+ margin: 0%;
+ padding: 0%;
+ box-sizing: border-box;
+}
+//colors
+$sedan: hsl(31, 77%, 52%);
+$suv: hsl(184, 100%, 22%);
+$luxury: hsl(179, 100%, 13%);
+$color_para: hsla(0, 0%, 100%, 0.75);
+$bc_he_bu:hsl(0, 0%, 95%);
+//fonts
+$Font_size: 15px;
+$font_weights: (
+ "deca": 400,
+ "shoulder": 700
+);
+
+@mixin font_1 {
+ font-family: 'Lexend Deca', sans-serif;
+ font-weight: map-get($font_weights, deca);
+}
+@mixin font_2 {
+ font-family: 'Big Shoulders Display', cursive;
+ font-weight: map-get($font_weights, shoulder);
+}
+body {
+ background: $bc_he_bu;
+ font-family: 'Big Shoulders Display', cursive;
+ font-size: $Font_size;
+ 
+ .container {
+  background-color: $bc_he_bu;
+  max-width: 95vw;
+  margin: 0.5em 1.5em;
+  border-radius: 1vh;
+  overflow: hidden;
+
+
+  .content_sedan,.content_suv,.content_luxury {
+   height: 25em;
+   padding: 2em;
+   .logo {
+    width:64px; 
+    height:40px;
+   }
+   p {
+    margin-top: 4em;
+    max-width: 55%;
+    color: $color_para;
+   }
+   h2 {
+    @include font_2;
+    color: $bc_he_bu;
+    text-transform: uppercase;
+   }
+  }
+  .content_sedan{
+   background-color: $sedan;
+  }
+  .content_suv{
+   background-color: $suv;
+  }
+  .content_luxury{
+   background-color: $luxury;
+  }
+ }
+}
+
+@mixin btn_all {
+ background-color: $bc_he_bu;
+ text-decoration: none;
+ padding: 0.3em 0.8em;
+ border-radius: 5vh;
+ padding-bottom: .5em;
+ font-size: 1.5rem;
+ box-shadow: inset 0 0 0 2px $bc_he_bu;
+ display: inline-block;
+ &:hover {
+  background: transparent;
+  border: 0.05em solid $bc_he_bu;
+ }
+}
+.btn {
+ @include btn_all();
+ margin-top: 2em;
+}
+//media query
+@media only screen and (min-width: 1440px) {
+ .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+ }
+}
