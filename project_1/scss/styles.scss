@@ -4,7 +4,7 @@
  // Desktop: 1440px
  //global variables
  //preset
-* {
+*, html {
  margin: 0%;
  padding: 0%;
  box-sizing: border-box;
@@ -26,16 +26,16 @@ body {
  background: $bc_he_bu;
  font-family: 'Big Shoulders Display', cursive;
  font-size: $Font_size;
- 
  .container {
   background-color: $bc_he_bu;
-  max-width: 95vw;
-  margin: 0.5em 1.5em;
+  margin: 0.5em 2em;
+  max-width: 90%;
   border-radius: 1vh;
   overflow: hidden;
+  
 
 
-  .content_sedan,.content_suv,.content_luxury {
+  .card_sedan,.card_suv,.card_luxury {
    height: 25em;
    padding: 2em;
    .logo {
@@ -43,23 +43,24 @@ body {
     height:40px;
    }
    p {
-    margin-top: 4em;
+    margin-top: 1em;
     max-width: 55%;
     color: $color_para;
    }
    h2 {
-    @include font_2;
+    font-weight: 700px;
     color: $bc_he_bu;
     text-transform: uppercase;
+    margin-top: 1em;
    }
   }
-  .content_sedan{
+  .card_sedan{
    background-color: $sedan;
   }
-  .content_suv{
+  .card_suv{
    background-color: $suv;
   }
-  .content_luxury{
+  .card_luxury{
    background-color: $luxury;
   }
  }
@@ -72,7 +73,7 @@ body {
  border-radius: 5vh;
  padding-bottom: .5em;
  font-size: 1.5rem;
- box-shadow: inset 0 0 0 2px $bc_he_bu;
+ box-shadow: inset 0 0 0 2px 2px $bc_he_bu;
  display: inline-block;
  &:hover {
   background: transparent;
@@ -84,11 +85,15 @@ body {
  margin-top: 2em;
 }
 //media query
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 376px) and (min-width: 1440px) {
  .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: auto;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  position: relative;
+  top: 15em;
  }
+ .btn {
+  margin-top: 0.5em;
+ }
+ 
 }
