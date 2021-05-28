@@ -1,7 +1,5 @@
 //font import
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
- // Mobile: 375px
- // Desktop: 1440px
  //global variables
  //preset
 *, html {
@@ -85,7 +83,7 @@ body {
  margin-top: 2em;
 }
 //media query
-@media only screen and (min-width: 376px) and (min-width: 1440px) {
+@media only screen and (min-width: 375px) and (min-width: 1440px) {
  .container {
   display: grid;
   grid-template-columns: repeat(3, auto);
