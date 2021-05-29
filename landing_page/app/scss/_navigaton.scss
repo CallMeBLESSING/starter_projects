@@ -20,7 +20,9 @@
         margin-bottom: 0.3125em;
       }
     }
-    &.open {
+  }
+  &.open {
+    .header__menu {
       > div:first-child {
         transform: rotate(45deg);
       }
@@ -30,6 +32,14 @@
       > div:last-child {
         transform: rotate(-45deg);
       }
+    }
+    .overlay_menu {
+      position: absolute;
+      top: 3.75rem;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-image: linear-gradient($primary_color1, transparent);
     }
   }
   &__links {
@@ -82,12 +92,4 @@
       opacity: 0.75;
     }
   }
-}
-.overlay_menu {
-  position: absolute;
-  top: 3.75rem;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-image: linear-gradient($primary_color1, transparent);
 }
