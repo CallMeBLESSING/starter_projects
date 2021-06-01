@@ -1,6 +1,9 @@
 .header {
   nav {
-    padding: 1.0625em 1.5em;
+    position: relative;
+    background: $neutral_color4;
+    padding-top: 1.0625em;
+    padding-bottom: 1.0625em;
   }
   &__logo {
     img {
@@ -34,8 +37,9 @@
       }
     }
     .overlay_menu {
-      position: absolute;
-      top: 3.75rem;
+      position: fixed;
+      height: 100%;
+      top: 0rem;
       right: 0;
       left: 0;
       bottom: 0;
@@ -90,6 +94,24 @@
     transition: opacity 300ms ease-in-out;
     &:hover {
       opacity: 0.75;
+    }
+  }
+  &__mobile {
+    background: $neutral_color4;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border-radius: 0.5vh;
+    position: absolute;
+    width: calc(100% - 3em);
+    left: 50%;
+    transform: translateX(-50%);
+    
+    a {
+      text-transform: capitalize;
+      color: $primary_color1;
+      padding: 1.25em;
+      display: block;
+      text-align: center;
     }
   }
 }

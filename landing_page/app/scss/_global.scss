@@ -12,9 +12,17 @@ html {
  line-height: 1.3;
  font-size: $font_size;
  color: $neutral_color2;
+ &.noSroll {
+  overflow: hidden;
+ }
 }
 a, a:visited, a:hover{
  text-decoration: none;
+}
+// mobile spacing
+.container {
+ padding-left: 1.5em;
+ padding-right: 1.5em;
 }
 //flex box
 .flex {

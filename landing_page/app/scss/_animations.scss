@@ -8,8 +8,12 @@
     opacity: 0;
   }
   to {
+    visibility: visible;
     opacity: 1;
   }
+}
+.fade_in {
+  animation: fade_in 400ms ease-in-out forwards;
 }
 @keyframes fade_out {
   from {
@@ -19,15 +23,16 @@
   99% {
     visibility: visible;
     opacity: 0;
+
   }
   to {
     visibility: hidden;
     opacity: 0;
   }
 }
-.fade_in {
-  animation: fade_in 4s ease-in-out forward;
-}
 .fade_out {
-  animation: fade_out 4s ease-in-out forward;
+  animation: fade_out 200ms ease-in-out forwards;
+}
+.fade {
+  visibility: hidden;
 }
