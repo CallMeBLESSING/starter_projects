@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css files/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     <!--script-->
     <script defer src="./app/js/app.js"></script>
     <title>Bank landing page</title>
@@ -20,7 +20,7 @@
   <body>
     <header class="header">
       <div class="overlay_menu fade"></div>
-      <nav class="flex container flex-jc-sb flex-ac-c">
+      <nav class="flex container container__padding_a flex-jc-sb flex-ac-c">
         <a href="/" class="header__logo">
           <img src="./images/logo.svg" alt="Easy bank" />
         </a>
@@ -36,14 +36,27 @@
           <a href="#">BLog</a>
           <a href="#">Careers</a>
         </div>
-        <a href="" class="header__btn mobile__device">Register Invite</a>
+        <a href="" class="btn mobile__device">Register Invite</a>
       </nav>
       <div class="header__mobile fade">
         <a href="#">home</a>
         <a href="#">about</a>
         <a href="#">contact</a>
         <a href="#">blog</a>
-        <a href="#">Careers</a></div>
+        <a href="#">Careers</a>
+      </div>
     </header>
+
+    <section class="hero">
+        <div class="hero__image"></div>
+        <div class="hero__text container__padding_a">
+          <h1>Next generation digital banking</h1>
+          <p>
+            Rake your financial life online. Your Easybank account will be for
+            sending, saving, budgeting, investing, and much more
+          </p>
+          <a href="#" class="btn">request invite</a>
+        </div>
+    </section>
   </body>
 </html>

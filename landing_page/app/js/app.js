@@ -9,16 +9,16 @@ function openMenu() {
  header.classList.toggle('open');
  if(header.classList.contains('open')) {
   body.classList.add('noScroll');
-  fadeElements.forEach(function(e){
+  fadeElements.forEach(function (e) {
    e.classList.remove('fade_out');
    e.classList.add('fade_in');
-  })
+  });
  } else {
-  body.classList.remove('noScroll')
-  fadeElements.forEach(function(e){
+  body.classList.remove('noScroll');
+  fadeElements.forEach(function (e) {
    e.classList.add('fade_out');
    e.classList.remove('fade_in');
-  })
+  });
  }
 }
 //
