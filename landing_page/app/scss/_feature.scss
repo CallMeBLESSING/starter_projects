@@ -1,0 +1,52 @@
+.features {
+ background: $neutral_color2;
+ text-align: center;
+ &__intro {
+  margin-bottom: 3.75em;
+
+  @include breakpoint_up(large) {
+   max-width: 60%;
+  }
+ }
+}
+.feature {
+
+
+ &__grid {
+
+  @include breakpoint_up(medium) {
+   display: flex;
+   flex-wrap: wrap;
+  }
+ }
+ &__item {
+  padding: 0.9375em;
+
+
+  @include breakpoint_up(large) {
+   flex: 1;
+  }
+
+ }
+ &__icon {
+  margin-bottom: 1.875em;
+  @include breakpoint_up(large) {
+   margin-bottom: 2.75em;
+  }
+ }
+ &__title {
+  font-weight: 300;
+  line-height: 1.15;
+  color: $primary_color1;
+  font-size: 1.25rem;
+  margin-bottom: 1.5em;
+  @include breakpoint_up(large) {
+   font-size: 1.5rem;
+   margin-bottom: 2.125em;
+  }
+ }
+ &__description {
+  font-size: 1rem;
+  line-height: 1.5;
+ }
+}

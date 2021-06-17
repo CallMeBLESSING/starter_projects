@@ -8,7 +8,7 @@ $breakPoints__down: (
  "medium": 63.9375em,
  "large": 87.4375em
 );
-
+//mixing
 @mixin breakpoint_up($size) {
  @media only screen and (min-width: map-get($breakPoints__up, $size)) {
   @content;
@@ -19,3 +19,17 @@ $breakPoints__down: (
   @content;
  }
 }
+@mixin fadeIn__mixing {
+ animation: fade__in 300ms ease-in-out forwards;
+}
+
+@mixin fadeOut__mixing {
+ animation: fade__out 300ms ease-in-out forwards;
+}
+.fadeIn {
+ @include fadeIn__mixing;
+}
+.fadeOut {
+ @include fadeOut__mixing;
+}
+.fade {}

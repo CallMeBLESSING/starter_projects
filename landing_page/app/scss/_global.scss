@@ -6,16 +6,17 @@ html {
 *::after {
   box-sizing: inherit;
 }
-*,
 body {
   margin: 0;
   padding: 0;
   font-family: "public san", sans-serif;
-  line-height: 1.3px;
+  line-height: 1.3em;
   font-size: $font_sm;
-  color: $neutral_color2;
+  color: $neutral_color1;
+  min-height: 300vh;
+  overflow-x: hidden;
   @include breakpoint_up(large){
-   font-size: $font__lg;
+   font-size: $font_md;
   }
   &.noSroll {
     overflow: hidden;
@@ -33,30 +34,41 @@ a:hover {
 }
 // mobile spacing
 .container {
-  max-width: 69.375rem;
-  margin: 0 auto;
+  max-width: 80%;
+  margin-top: 0;
+  margin-left: 10%;
+  margin-right: 10%;
   &__padding_a {
-    padding-top: 2.25em;
+    padding-top: 4.375em;
     padding-right: 1.5em;
-    padding-bottom: 2.25em;
+    padding-bottom: 4.375em;
     padding-left: 1.5em;
+    @include breakpoint_up(large) {
+      padding-top: 6em;
+      padding-bottom: 6em;
+    }
   }
   &__padding_y {
-    padding-top: 2.25em;
-    padding-bottom: 2.25em;
+    padding-top: 4.375em;
+    padding-bottom: 4.375em;
+
+    @include breakpoint_up(large) {
+      padding-top: 6em;
+      padding-bottom: 6em;
+    }
   }
   &__padding_x {
     padding-right: 1.5em;
     padding-left: 1.5em;
   }
   &__padding_t {
-    padding-top: 2.25em;
+    padding-top: 4.375em;
   }
   &__padding_r {
     padding-right: 1.5em;
   }
   &__padding_b {
-    padding-bottom: 2.25em;
+    padding-bottom: 4.375em;
   }
   &__padding_l {
     padding-left: 1.5em;
@@ -87,9 +99,28 @@ a:hover {
     display: none;
   }
 }
+p {
+    line-height:1.5;
+    margin-bottom: 2.25em;
+    color: $neutral_color1;
+   }
+h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1.5625em;
+  line-height: 1.15;
+  font-weight: 300;
+  color: $primary_color1;
+
+
+
+  @include breakpoint_up(large) {
+    font-size: 2.25rem;
+    margin-bottom: 1.25em;
+  }
+}
 .btn {
   display: inline-block;
-  padding: 0.875em 2.875em;
+  padding: 1.5vh 2vh;
   background: linear-gradient(to right, $primary_color2, $primary_color3);
   border-radius: 50px;
   border: 0;
@@ -99,6 +130,16 @@ a:hover {
   font-weight: 700;
   transition: opacity 300ms ease-in-out;
   &:hover {
-    opacity: 0.75;
+    opacity: 0.4;
+  }
+}
+.btn__Gone {
+  @include breakpoint_down(small) {
+    display: none;
+  }
+}
+.hamburger_desktop {
+  @include breakpoint_up(large) {
+    display: none;
   }
 }

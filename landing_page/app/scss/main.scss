@@ -1,8 +1,11 @@
 //imports
 @import 'variables';
+@import 'animations';
 @import 'mixins';
 @import 'global';
 @import 'navigation';
-@import 'animations';
-@import 'hero';
-///
+@import './hero';
+@import './feature';
+@import "./article";
+@import './footer';
+
