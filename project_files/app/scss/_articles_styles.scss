@@ -1,0 +1,27 @@
+.articles {
+ display: grid;
+ 
+ &_section_first {
+  height: 19.0625em;
+  width: 100%;
+  background-image: url(/images/mobile/image-transform.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+ }
+ &_section_second {
+  min-height: 19.0626em;
+  h1 {
+   font-size: 1.91rem;
+   font-family: "Fraunces", serif;
+  }
+  p {
+
+  }
+ }
+
+ @include brPointsUp(lg) {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+ }
+}
