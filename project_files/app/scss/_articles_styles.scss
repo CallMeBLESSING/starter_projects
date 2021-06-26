@@ -1,27 +1,235 @@
 .articles {
- display: grid;
- 
- &_section_first {
-  height: 19.0625em;
-  width: 100%;
-  background-image: url(/images/mobile/image-transform.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
- }
- &_section_second {
-  min-height: 19.0626em;
-  h1 {
-   font-size: 1.91rem;
-   font-family: "Fraunces", serif;
-  }
-  p {
-
-  }
- }
-
- @include brPointsUp(lg) {
   display: grid;
-  grid-template-columns: repeat(2, auto);
- }
+  grid-template-columns: auto;
+
+  &_section_first {
+    min-height: 19.0625em;
+    width: 100%;
+    background-image: url(/images/mobile/image-transform.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include brPointsUp(lg) {
+      grid-area: second;
+      background-image: url(/images/desktop/image-transform.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  &_section_second {
+    min-height: 20.0626em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .wraper {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      font-size: 1.91rem;
+      font-family: "Fraunces", serif;
+      margin-bottom: 1.25em;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: lighter;
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: 1.9em;
+    }
+    .cta {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .articles__cta {
+        font-size: 0.95rem;
+        font-family: "Fraunces", serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        &_underline {
+          margin-top: -0.3em;
+          height: 0.7vh;
+          width: 6.2875em;
+          background: $Yellow;
+          border-radius: 1vh;
+          z-index: -1;
+        }
+      }
+    }
+    @include brPointsUp(lg) {
+      grid-area: first;
+      padding: 10.375em;
+      .wraper {
+        display: grid;
+        justify-items: start;
+      }
+      h1 {
+        
+      }
+      p {
+        text-align: left;
+      }
+    }
+  }
+  &_section_forth {
+    min-height: 20.0626em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .wraper {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      font-size: 1.91rem;
+      font-family: "Fraunces", serif;
+      margin-bottom: 1.25em;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: lighter;
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: 1.9em;
+    }
+    .cta {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .articles__cta {
+        font-size: 0.95rem;
+        font-family: "Fraunces", serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        &_underline {
+          margin-top: -0.3em;
+          height: 0.7vh;
+          width: 6.2875em;
+          background: $Soft_red;
+          border-radius: 1vh;
+          z-index: -1;
+        }
+      }
+    }
+    @include brPointsUp(lg) {
+      grid-area: forth;
+      padding: 10.375em;
+      .wraper {
+        display: grid;
+        justify-items: start;
+        text-align: left;
+      }
+      h1 {
+        justify-self: start;
+      }
+      p {
+        text-align: left;
+      }
+    }
+  }
+  &_section_third {
+    min-height: 19.0625em;
+    width: 100%;
+    background-image: url(/images/mobile/image-stand-out.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include brPointsUp(lg) {
+      grid-area: third;
+      background-image: url(/images/desktop/image-stand-out.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  &_section_fifth {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url(/images/mobile/image-graphic-design.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 35.25em;
+    text-align: center;
+    color: $Dark_desaturated_cyan;
+    .content {
+      h1 {
+        font-size: 1.91rem;
+        font-family: "Fraunces", serif;
+        margin-bottom: 1.25em;
+      }
+      p {
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.5;
+        margin-bottom: 1.25em;
+      }
+    }
+    @include brPointsUp(lg) {
+      grid-area: fifth;
+      background-image: url(/images/desktop/image-graphic-design.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  &_section_sixth {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url(/images/mobile/image-photography.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 35.25em;
+    text-align: center;
+    color: $Dark_blue;
+    .content {
+      h1 {
+        font-size: 1.91rem;
+        font-family: "Fraunces", serif;
+        margin-bottom: 1.25em;
+      }
+      p {
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.5;
+        margin-bottom: 1.25em;
+      }
+    }
+    @include brPointsUp(lg) {
+      grid-area: sixth;
+      background-image: url(/images/desktop/image-photography.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  @include brPointsUp(lg) {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, 37.5em);
+    grid-template-areas:
+      "first second"
+      "third forth"
+      "fifth sixth";
+  }
 }

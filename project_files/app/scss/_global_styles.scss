@@ -7,16 +7,34 @@
  box-sizing: border-box;
 }
 body {
+ color: $Very_dark_desaturated_blue;
  text-align: center;
  font-family: 'Barlow', sans-serif;
  font-size: 1.125rem;
+ overflow-x: hidden;
 }
 //helper classes
 .padding {
- padding-top: 4.375em;
- padding-right: 1.75em;
- padding-bottom: 3.9375em;
- padding-left: 1.75em;
+ padding-top: 2.111em;
+ padding-right: 1.1875em;
+ padding-bottom: 2.111em;
+ padding-left: 1.1875em;
+
+ &_t {
+ padding-top: 2.375em;
+ }
+ &_r {
+ padding-right: 1.1875em;
+ }
+ &_b {
+ padding-bottom: 2.4375em;
+ }
+ &_l {
+ padding-left: 1.1875em;
+ }
+}
+.p_wrap {
+ max-width: 25.125em;
 }
 .btn {
  text-transform: uppercase;

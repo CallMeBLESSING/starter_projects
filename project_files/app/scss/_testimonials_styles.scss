@@ -1,0 +1,57 @@
+.testimonials {
+  &_title {
+    margin-top: 3.75em;
+    font-size: 0.95rem;
+    font-family: "Fraunces", serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 0.3em;
+  }
+
+  &__section {
+    @include brPointsUp(lg) {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      justify-content: center;
+      align-content: center;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.75em;
+  }
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 3.75em;
+    max-height: 3.75em;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1.5em;
+
+    img {
+      max-width: 3.75em;
+      max-height: 3.75em;
+    }
+  }
+  &__text {
+    font-size: 1rem;
+    font-weight: lighter;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 1.9em;
+  }
+  &__name {
+    font-family: "Fraunces", serif;
+    margin-bottom: 0.7em;
+  }
+  &__p {
+    font-size: 1rem;
+    font-weight: normal;
+    opacity: 0.5;
+  }
+}

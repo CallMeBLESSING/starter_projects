@@ -1,0 +1,65 @@
+.img_gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  @include brPointsUp(lg) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+  &__images {
+    min-width: 13.5rem;
+    min-height: 13.5rem;
+    @include brPointsUp(md) {
+      min-width: 22.25rem;
+      min-height: 27.875rem;
+    }
+  }
+  .first {
+    background-image: url(/images/mobile/image-gallery-milkbottles.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include brPointsUp(md) {
+      background-image: url(/images/desktop/image-gallery-milkbottles.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  .second {
+    background-image: url(/images/mobile/image-gallery-orange.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include brPointsUp(md) {
+      background-image: url(/images/desktop/image-gallery-orange.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  .third {
+    background-image: url(/images/mobile/image-gallery-cone.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include brPointsUp(md) {
+      background-image: url(/images/desktop/image-gallery-cone.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  .forth {
+    background-image: url(/images/mobile/image-gallery-sugar-cubes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include brPointsUp(md) {
+      background-image: url(/images/desktop/image-gallery-sugarcubes.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+}

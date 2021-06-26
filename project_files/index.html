@@ -14,7 +14,7 @@
     <!--styles-->
     <link rel="stylesheet" href="./css/main_styles.css" />
     <!--scripts-->
-    <script src="app/src/app.js" defer type="text/javascript"></script>
+    <script defer type="text/javascript"  src="app/src/app.js"></script>
     <title>Frontend Mentor | Sunnyside agency landing page</title>
   </head>
   <body>
@@ -49,93 +49,103 @@
       <article class="articles">
         <section class="articles_section_first"></section>
         <section class="articles_section_second padding">
-          <h1>Transform your brand</h1>
-          <p>
-            we are full-service creative agency specializing in helping brands
-            grow fast.Engage your clients through compelling visuals that do
-            most of the marketing for you.
-          </p>
-          <a href="#" class="articles__cta">learn more</a>
-          <div class="articles__cta_underline"></div>
+          <div class="wraper">
+            <h1>Transform your brand</h1>
+            <p class="p_wrap">
+              we are full-service creative agency specializing in helping brands
+              grow fast.Engage your clients through compelling visuals that do
+              most of the marketing for you.
+            </p>
+            <div class="cta">
+              <a href="#" class="articles__cta">learn more</a>
+              <div class="articles__cta_underline"></div>
+            </div>
+          </div>
         </section>
         <section class="articles_section_third"></section>
-        <section class="articles_section">
-          <h1>Stand out to the right audience</h1>
-          <p>
-            Using a collaborative formula of designers, researchers,
-            photographers, videographers, and copywriters, we’ll build and
-            extend your brand in digital places.
-          </p>
-          <a href="#" class="articles__cta">learn more</a>
-          <div class="articles__cta_underline"></div>
-        </section>
-        <section class="articles_section_forth">
-          <h1>graphic design</h1>
-          <p>
-            Great design makes you memorable. We deliver artwork that
-            underscores your brand message and captures potential clients’
-            attention.
-          </p>
+        <section class="articles_section_forth padding">
+          <div class="wraper">
+            <h1>Stand out to the right audience</h1>
+            <p class="p_wrap">
+              Using a collaborative formula of designers, researchers,
+              photographers, videographers, and copywriters, we’ll build and
+              extend your brand in digital places.
+            </p>
+            <div class="cta">
+              <a href="#" class="articles__cta">learn more</a>
+              <div class="articles__cta_underline"></div>
+            </div>
+          </div>
         </section>
         <section class="articles_section_fifth">
-          <h1>Photography</h1>
-          <p>
-            Increase your credibility by getting the most stunning, high-quality
-            photos that improve your business image.
-          </p>
+          <div class="content padding_b">
+            <h1>graphic design</h1>
+            <p class="p_wrap">
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </div>
+        </section>
+        <section class="articles_section_sixth">
+          <div class="content padding_b">
+            <h1>Photography</h1>
+            <p class="p_wrap">
+              Increase your credibility by getting the most stunning, high-quality
+              photos that improve your business image.
+            </p>
+          </div>
         </section>
       </article>
       <article class="testimonials">
         <h1 class="testimonials_title">client testimonials</h1>
-        <section class="testimonials__section">
-          <div class="testimonials__content">
+        <section class="testimonials__section padding">
+          <div class="testimonials__content padding">
             <div class="testimonials__img">
               <img src="/images/image-emily.jpg" alt="Director" />
             </div>
-            <p class="testimonials__text">
+            <p class="testimonials__text p_wrap">
               We put our trust in Sunnyside and they delivered, making sure our
               needs were met and deadlines were always hit.
             </p>
             <h2 class="testimonials__name">Emily R.</h2>
             <div class="testimonials__p">marketing direction</div>
           </div>
-          <div class="testimonials__content">
+          <div class="testimonials__content padding">
             <div class="testimonials__img">
-              <img src="/images/image-emily.jpg" alt="Director" />
+              <img src="/images/image-thomas.jpg" alt="Director" />
             </div>
-            <p class="testimonials__text">
-              We put our trust in Sunnyside and they delivered, making sure our
-              needs were met and deadlines were always hit.
+            <p class="testimonials__text p_wrap">
+               Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience..
             </p>
-            <h2 class="testimonials__name">Emily R.</h2>
-            <div class="testimonials__p">marketing direction</div>
+            <h2 class="testimonials__name">Thomas S.</h2>
+            <div class="testimonials__p">Chief Operating Officer</div>
           </div>
-          <div class="testimonials__content">
+          <div class="testimonials__content padding">
             <div class="testimonials__img">
-              <img src="/images/image-emily.jpg" alt="Director" />
+              <img src="/images/image-jennie.jpg" alt="Director" />
             </div>
-            <p class="testimonials__text">
-              We put our trust in Sunnyside and they delivered, making sure our
-              needs were met and deadlines were always hit.
+            <p class="testimonials__text p_wrap">
+               Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
             </p>
-            <h2 class="testimonials__name">Emily R.</h2>
-            <div class="testimonials__p">marketing direction</div>
+            <h2 class="testimonials__name">Jennie F.</h2>
+            <div class="testimonials__p">Business Owner</div>
           </div>
         </section>
       </article>
       <section class="img_gallery">
-        <div class="img_gallery__images"><img src="/images/mobile/image-gallery-milkbottles.jpg" alt="Milk Bottles"></div>
-        <div class="img_gallery__images"><img src="/images/mobile/image-gallery-milkbottles.jpg" alt="Milk Bottles"></div>
-        <div class="img_gallery__images"><img src="/images/mobile/image-gallery-milkbottles.jpg" alt="Milk Bottles"></div>
-        <div class="img_gallery__images"><img src="/images/mobile/image-gallery-milkbottles.jpg" alt="Milk Bottles"></div>
+        <div class="img_gallery__images first"></div>
+        <div class="img_gallery__images second"></div>
+        <div class="img_gallery__images third"></div>
+        <div class="img_gallery__images forth"></div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="footer__logo"><img src="/images/logo.svg" alt="logo"></div>
+    <footer class="footer padding">
+      <div class="footer__logo"><img src="/images/logo_dark.svg" alt="logo"></div>
       <div class="footer__map">
-        <a href="#" class="footer__map__items">About</a>
-        <a href="#" class="footer__map__items">Services</a>
-        <a href="#" class="footer__map__items">Projects</a>
+        <a href="#" class="footer__map__links">About</a>
+        <a href="#" class="footer__map__links">Services</a>
+        <a href="#" class="footer__map__links">Projects</a>
       </div>
       <div class="footer__icons">
         <a href="#"><img src="./images/icon-facebook.svg" alt="facebook"></a>

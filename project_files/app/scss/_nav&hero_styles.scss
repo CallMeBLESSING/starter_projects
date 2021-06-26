@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   @include brPointsUp(md) {
-   min-height: 90vh; 
+    min-height: 90vh;
     background-image: url(/images/desktop/image-header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,21 +20,20 @@
   padding-top: 2.0625em;
 
   @include brPointsUp(md) {
+    &__links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-   &__links {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
- 
-     .link {
-       text-decoration: none;
- 
-       &:not(:last-child) {
-         margin-right: 1.2em;
-         color: $White;
-       }
-     }
-   }
+      .link {
+        text-decoration: none;
+
+        &:not(:last-child) {
+          margin-right: 1.2em;
+          color: $White;
+        }
+      }
+    }
   }
   &__mobile {
     .hamburger {
@@ -61,6 +60,17 @@
       }
     }
   }
+  .OpenMobile {
+    .top {
+      animation: openTop 500ms ease-in-out forwards;
+    }
+    .middle {
+      animation: openMiddle 500ms ease-in-out forwards;
+    }
+    .bottom {
+      animation: openBottom 500ms ease-in-out forwards;
+    }
+  }
 }
 .hero {
   &__text {
@@ -69,13 +79,11 @@
     font-family: "Fraunces", serif;
     text-transform: uppercase;
     color: $White;
+    @include brPointsUp(lg) {
+      
+    }
   }
   &__harrow {
     margin-top: 2.9225em;
   }
 }
-.openMenuMobile {
-
-
-}
-
