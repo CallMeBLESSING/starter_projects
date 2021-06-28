@@ -41,7 +41,11 @@ body {
  border-radius: 3vh;
  padding: 0.8em;
  background: $White;
- font-size: 0.9rem;
+ font-size: 0.9875rem;
  font-family: 'Fraunces', serif;
  font-weight: lighter;
+ &:hover {
+  background: rgb(130, 207, 245);
+  color: $White;
+ }
 }

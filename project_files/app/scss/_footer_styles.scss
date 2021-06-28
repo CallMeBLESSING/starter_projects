@@ -4,15 +4,56 @@
  height: 17.5rem;
 
  &__logo {
-
+  margin-top: 3em;
  }
  &__map {
+  margin-top: 2em;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   &__links {
+   font-size: 1.1785rem;
    text-decoration: none;
+   color: $Dark_desaturated_cyan;
+   transition: all 0.2s ease-in-out;
+   &:hover {
+    color: $White;
+   }
   }
  }
  &__icons {
+  margin-top: 5em;
+  padding: 0em 4em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .svg-inline--fa {
+   font-size: large;
+   font-weight: 200;
+   color: $Dark_desaturated_cyan;
+   transition: all 0.2s ease-in-out;
+   &:hover {
+    color: $White;
+   }
+  }
+ }
+ @include brPointsUp(md) {
 
+  &__map {
+   justify-content: center;
+   &__links {
+    margin-right: 2em;
+   }
+  }
+  &__icons {
+   justify-content: center;
+   .svg-inline--fa {
+    margin-right: 1em;
+    justify-content: center;
+    font-size: x-large;
+   }
+  }
  }
 }

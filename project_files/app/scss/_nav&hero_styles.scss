@@ -29,8 +29,9 @@
         text-decoration: none;
 
         &:not(:last-child) {
-          margin-right: 1.2em;
+          margin-right: 1.5em;
           color: $White;
+          font-size: 1.5rem;
         }
       }
     }
@@ -39,39 +40,34 @@
     .hamburger {
       height: 1.3125em;
       width: 1.5625em;
-      // border: 1px solid red;
       .line {
         display: block;
         height: 0.1111em;
         width: 100%;
         background: $White;
+        transition: all 0.2s ease-in-out;
+        transform-origin: left left;
         &:not(:last-child) {
           margin-bottom: 0.3129em;
         }
       }
+    }
+    .openMobile {
       .top {
-        animation: closedTop 500ms ease-in-out forwards;
+        transform: translateY(-4px) rotate(45deg);
       }
       .middle {
-        animation: closedMiddle 500ms ease-in-out forwards;
+        transform: scale(0);
       }
       .bottom {
-        animation: closedBottom 500ms ease-in-out forwards;
+        transform: translateY(-20px) rotate(-45deg);
       }
     }
   }
-  .OpenMobile {
-    .top {
-      animation: openTop 500ms ease-in-out forwards;
-    }
-    .middle {
-      animation: openMiddle 500ms ease-in-out forwards;
-    }
-    .bottom {
-      animation: openBottom 500ms ease-in-out forwards;
-    }
-  }
+  
 }
+
+
 .hero {
   &__text {
     margin-top: 2.3125em;
@@ -80,10 +76,57 @@
     text-transform: uppercase;
     color: $White;
     @include brPointsUp(lg) {
-      
+      font-size: 3.6875rem;
+      letter-spacing: 0.21em;
     }
   }
   &__harrow {
     margin-top: 2.9225em;
   }
+}
+.mobile__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80vw;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 7rem;
+  position: absolute;
+  align-items: center;
+  background: $White;
+
+  .link {
+    font-size: 2rem;
+    text-decoration: none;
+    margin-bottom: 1em;
+    color: $Very_dark_desaturated_blue;
+    opacity: 0.9;
+  }
+  .btn {
+    margin-top: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4vh;
+    padding: 0.4em;
+    background: $Yellow;
+    color: $Very_dark_desaturated_blue;
+    font-size: 1.5rem;
+    font-family: "Fraunces", serif;
+    font-weight: lighter;
+  }
+  &::before {
+    content: "";
+    height: 2em;
+    width: 2em;
+    background: linear-gradient(to bottom right, #3DBEFF 0%, #3DBEFF 50%,#fff 50%,#fff 100%);
+    position: absolute;
+    top: -2.2rem;
+    right: 0;
+  }
+  visibility: hidden;
+  transition: all 0.2ms ease-in-out;
+}
+.open {
+  visibility: visible;
 }
